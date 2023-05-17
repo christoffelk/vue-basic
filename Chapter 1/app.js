@@ -18,28 +18,23 @@
 //         }
 //     }
 // });
-const data = {
-    maximum: 50,
-    product: [
-        {
-            id: '1',
-            name: 'hello',
-            description: "oh my god",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4xAZC_IEqYENTyekCJq6SViwmesoEN_lsUiozV-pl&s"
-            ,price: 50000
-        },
-        {
-            id: '2',
-            name: 'hello world',
-            description: "oh my god",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4xAZC_IEqYENTyekCJq6SViwmesoEN_lsUiozV-pl&s"
-        ,
-        price: 500000
 
-        }
-    ]
-}
 const app = new Vue({
     el: "#app",
-    data
+    data:{
+        maximum: 50,
+        product: null
+    },
+    mounted:  async function() {
+        // const response = await fetch('https://hplussport.com/api/products/order/price')
+
+        // const result =await  response.json();
+
+        // this.product = result.data
+
+        fetch('https://hplussport.com/api/products/order/price')
+        .then(response => response.json())
+        .then(data => {this.product = data})
+
+    }
   });
