@@ -16,7 +16,17 @@
   </head>
 
   <body class="">
-    <div class="" id="app">
+    <div class="container" id="app">
+      <div class="row d-flex mb-3 align-items-center" v-for="item in product">
+        <div class="col-sm-4">
+          <img :src="item.image" class="img-fluid d-block" :alt="item.name" />
+        </div>
+        <div class="col">
+          <h3 class="text-info">{{item.name}}</h3 class="text-info">
+          <p class="mb-0">{{item.description}}</p>
+          <div class="h5 float-right">Rp{{item.price}}</div>
+        </div>
+      </div>
       <!-- <nav class="navbar navbar-light bg-light fixed-top" v-if="cart.length > 0">
             <div class="navbar-text ml-auto">
                 <b>cart:</b>
@@ -42,10 +52,6 @@
                 <div class="h5 float-right">Rp{{ item.price }}</div>
             </div>
         </div> -->
-      <img :src="image" class="img-fluid" :alt="name" />
-      <h2>{{name}}</h2>
-      <p>{{description}}</p>
-      <div class="h3">Rp{{price}}</div>
     </div>
 
     <script

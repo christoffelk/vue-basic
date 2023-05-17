@@ -19,10 +19,24 @@
 //     }
 // });
 const data = {
-    "name": "hello world",
-    "description": "hello wolrd",
-    price: "34000",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4xAZC_IEqYENTyekCJq6SViwmesoEN_lsUiozV-pl&s"
+    product: [
+        {
+            id: '1',
+            name: 'hello',
+            description: "oh my god",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4xAZC_IEqYENTyekCJq6SViwmesoEN_lsUiozV-pl&s"
+            ,price: 50000
+        },
+        {
+            id: '2',
+            name: 'hello world',
+            description: "oh my god",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4xAZC_IEqYENTyekCJq6SViwmesoEN_lsUiozV-pl&s"
+        ,
+        price: 500000
+
+        }
+    ]
 }
 const app = new Vue({
     el: "#app",
