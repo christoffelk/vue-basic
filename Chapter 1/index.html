@@ -17,7 +17,12 @@
 
   <body class="">
     <div class="container" id="app">
-      <div class="row d-flex mb-3 align-items-center" v-for="item in product">
+        <div class="form-inline mr-auto">
+            <label for="" class="font-weight-bold mr-2">Max</label>
+            <input type="number" class="form-control w-25" v-model="maximum">
+        </div>
+        <input type="range" min="0" max="200" v-model="maximum" class="custom-range">
+      <div class="row d-flex mb-3 align-items-center" v-for="item in product" v-if="item.price > maximum">
         <div class="col-sm-4">
           <img :src="item.image" class="img-fluid d-block" :alt="item.name" />
         </div>

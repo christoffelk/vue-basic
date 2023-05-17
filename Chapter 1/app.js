@@ -19,6 +19,7 @@
 //     }
 // });
 const data = {
+    maximum: 50,
     product: [
         {
             id: '1',
