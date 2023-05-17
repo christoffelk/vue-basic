@@ -42,7 +42,10 @@
                 <div class="h5 float-right">Rp{{ item.price }}</div>
             </div>
         </div> -->
+      <img :src="image" class="img-fluid" :alt="name" />
       <h2>{{name}}</h2>
+      <p>{{description}}</p>
+      <div class="h3">Rp{{price}}</div>
     </div>
 
     <script
@@ -61,14 +64,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- <script src="app.js"></script> -->
-    <script>
-      var app = new Vue({
-        el: "#app",
-        data: {
-          name: "Vue.js",
-        },
-      });
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
